@@ -2,12 +2,13 @@ const mongoose = require('mongoose')
 require('./category')
 require('./user')
 
-const templateSchema = new mongoose.Schema({
+const readyTemplateSchema = new mongoose.Schema({
     name: {type: String, required: true},
+    sortOrder: Number,
     owner: {type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true},
     category: {type: mongoose.Schema.Types.ObjectId, ref: 'Category'},
 })
 
-const Template = mongoose.model('Template', templateSchema)
+const ReadyTemplate = mongoose.model('ReadyTemplate', readyTemplateSchema)
 
-module.exports = Template
+module.exports = ReadyTemplate

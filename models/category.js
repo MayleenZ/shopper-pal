@@ -5,9 +5,11 @@ require("./item")
 
 const categorySchema = new mongoose.Schema({
     name: {type: String, required: true},
+    sortOrder: Number,
     topics: [{type: mongoose.Schema.Types.ObjectId, ref: 'Topic'}],
     lists: [{type: mongoose.Schema.Types.ObjectId, ref: 'List'}],
     items: [{type: mongoose.Schema.Types.ObjectId, ref: 'Item'}]
+
 })
 
 
