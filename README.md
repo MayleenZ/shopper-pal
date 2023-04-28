@@ -19,8 +19,11 @@ Keep your grocery trips organized to save money, time and energy.
 <img width="684" alt="home-page" src="https://user-images.githubusercontent.com/99820213/234941879-9a04df57-a8ce-42c1-97df-cc926b536572.png">
 <img width="730" alt="meal-prep-template" src="https://user-images.githubusercontent.com/99820213/234941886-9db22301-202c-4eed-b524-748521aafafe.png">
 
+## Entity Relationship Diagram:
+<img width="885" alt="Screen Shot 2023-04-28 at 11 39 27 AM" src="https://user-images.githubusercontent.com/99820213/235192619-3311de7b-f134-423f-9986-e5564c4234b9.png">
 
 ## Built With
+
 ### Technologies Explained:
 
 
