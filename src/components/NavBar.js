@@ -8,11 +8,14 @@ function NavBar({ user, setUser }) {
   };
   return (
     <nav>
-      <Link to="/orders">Order History</Link>
+      <Link to="/home">Home Page</Link>
+      <Link to="/custom">Create Your Template</Link>
       &nbsp; | &nbsp;
-      <Link to="/orders/new">New Order</Link> <span>Welcome, {user.name}</span>{" "}
+      <Link to="/saved">Saved Templates</Link> <span>Welcome, {user.name}</span>{" "}
       <Link to="" onClick={handleLogOut}>
         Logout
+      </Link>
+      <Link to = '/ready-to-use'>Ready to use Templates
       </Link>
     </nav>
   );
