@@ -10,9 +10,7 @@ function NavBar({ user, setUser }) {
     <nav>
       <Link to="/home">Home</Link>
       &nbsp; | &nbsp;
-      <Link to="/pre-made">Pre-made Templates</Link>
-      &nbsp; | &nbsp;
-      <Link to="/custom">Create Your Template</Link>
+      <Link to="/create">Create Your Template</Link>
       &nbsp; | &nbsp;
       <Link to="/saved">Saved Templates</Link> 
       &nbsp; | &nbsp;

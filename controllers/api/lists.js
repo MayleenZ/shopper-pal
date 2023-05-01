@@ -1,5 +1,5 @@
 const List = require("../../models/list");
-const Item = require("../../models/item");
+const {createItem} = require('./items.js')
 
 async function createList(req, res) {
   try {
@@ -10,6 +10,23 @@ async function createList(req, res) {
   }
 }
 
+async function addItemToList(req, res) {
+  try {
+    const list = await List.findById(req.params.listId);
+    if (!list) {
+      return res.status(404).json({ error: "List not found" });
+    }
+    const item = await createItem(req, res);
+
+    list.items.push(item._id);
+
+    await list.save();
+    res.status(201).json({ message: "Item added to List" });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Server error" });
+  }
+}
 
 async function deleteItemFromList(req, res) {
     try {
@@ -58,8 +75,20 @@ async function deleteItemFromList(req, res) {
     }
   }
 
+async function deleteList(req,res){
+    try {
+        const list = await List.findById(req.params.listId);
+        if (!list) {
+          return res.status(404).json({ error: "List not found" });
+        }
+        await list.remove()
+    } catch (error) {
+        console.error(error)
+    }
+}
+
 
 module.exports = {
-  createList,
+  createList, deleteList,
   addItemToList, deleteItemFromList, updateItemfromList
 };

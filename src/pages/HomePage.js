@@ -1,5 +1,11 @@
 function Homepage() {
-  return <h1>Home Page</h1>;
+  return(
+  <div>
+    <h1>Shopper Pal</h1>
+    <p>How to use app:</p>
+    <p>Shopper pal </p>
+    </div>
+  )
 }
 
 export default Homepage;

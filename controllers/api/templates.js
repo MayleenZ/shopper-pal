@@ -28,7 +28,36 @@ async function addListToTemplate(req,res){
     }
 }
 
+async function deleteListFromTemplate(req,res){
+    try {
+        const template = await Template.findById(req.params.templateId)
+        const index = template.lists.indexOf(req.params.listId)
+        template.lists.splice(index,1)
+        await template.save()
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+async function deleteTemplate(req,res){
+    try {
+        const template = await Template.findByIdAndRemove(req.params.templateId)
+        console.log(template + " is deleted")
+    } catch (error) {
+     console.error(error)   
+    }
+}
+
+async function allTemplates(req,res){
+    try {
+        const templates = await Template.find({})
+        res.json(templates)
+    } catch (error) {
+        console.error(error)
+    }
+}
+
 
 module.exports = {
-    createTemplate, addListToTemplate
+    createTemplate, deleteTemplate, addListToTemplate, deleteListFromTemplate, allTemplates
 }

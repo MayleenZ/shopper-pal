@@ -3,8 +3,7 @@ require('./category')
 
 const TemplateSchema = new mongoose.Schema({
   name: { type: String, required: true },
-  owner: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
-  sortOrder: Number,
+  owner: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true }
 });
 
 const template = mongoose.model('template', TemplateSchema)
