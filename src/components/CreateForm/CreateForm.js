@@ -1,24 +1,23 @@
 import { useState } from 'react'
 
+
 export default function CreateForm() {
-const [createTemplate, setCreateTemplate] = useState({
-    templateName: "",
+    const [templateName, setTemplateName] = useState("")
+
+    const [list, setList] = useState({
     name1: "",
     name2: "",
     name3: "",
     name4: ""
 })
 
+
 const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-        console.log(createTemplate);
         const templateData = {
-            templateName: templateData.templateName,
-            name1: templateData.name1,
-            name2: templateData.name2,
-            name3: templateData.name3,
-            name4: templateData.name4,
+            templateName,
+            listArray : [...list]
         }
 
     } catch (error) {
@@ -26,7 +25,8 @@ const handleSubmit = async (e) => {
     }
 }
 
-
+//put in value, onchange, handlesubmit
+//backend need the user (pass the user, (req.user.id))
   return (
     <div>
       <div className="form-container">
