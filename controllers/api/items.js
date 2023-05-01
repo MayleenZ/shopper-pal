@@ -9,9 +9,18 @@ async function createItem(req,res){
     }
 }
 
+async function deleteItem(req,res){
+    try {
+        const item = await Item.findByIdAndRemove(req.params.ItemId)
+        console.log(item);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 
 
 
 module.exports = {
-    createItem
+    createItem, deleteItem
 }
