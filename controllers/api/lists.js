@@ -10,27 +10,6 @@ async function createList(req, res) {
   }
 }
 
-async function addItemToList(req, res) {
-  try {
-    const list = await List.findById(req.params.listId);
-    if (!list) {
-      return res.status(404).json({ error: "List not found" });
-    }
-
-    const item = await Item.findById(req.body.itemId);
-    if (!item) {
-      return res.status(404).json({ error: "Item not found" });
-    }
-
-    list.items.push(item._id);
-
-    await list.save();
-    res.status(201).json({ message: "Item added to List" });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: "Server error" });
-  }
-}
 
 async function deleteItemFromList(req, res) {
     try {
