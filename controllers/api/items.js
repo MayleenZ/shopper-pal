@@ -1,5 +1,7 @@
 const Item = require('../../models/item')
 
+
+//create item for list
 async function createItem(req,res){
     try {
         const item = await Item.create(req.body)
@@ -9,6 +11,7 @@ async function createItem(req,res){
     }
 }
 
+//delete item from list
 async function deleteItem(req,res){
     try {
         const item = await Item.findByIdAndRemove(req.params.ItemId)
@@ -17,7 +20,6 @@ async function deleteItem(req,res){
         console.log(error);
     }
 }
-
 
 
 
