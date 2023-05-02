@@ -4,7 +4,7 @@ const List = require("../../models/list");
 //create list for a template
 async function createList(req, res) {
   try {
-    const list = await List.create(req.body.listName, req.params.templateId);
+    const list = await List.create(req.body);
     console.log(list);
   } catch (error) {
     console.error(error);
@@ -25,7 +25,15 @@ async function deleteList(req,res){
     }
 }
 
+async function allLists(req,res){
+  try {
+      const lists = await List.find({})
+      res.json(lists)
+  } catch (error) {
+      console.error(error)
+  }
+}
 
 module.exports = {
-  createList, deleteList
+  createList, deleteList, allLists
 };

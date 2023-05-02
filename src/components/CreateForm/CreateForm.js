@@ -7,7 +7,7 @@ import {sendForm} from '../../utilities/form-api'
 
 export default function CreateForm() {
 
-const [templateData, setTemplateData] = useState({
+const [listData, setListData] = useState({
     listName: "",
     item1: "",
     item2: "",
@@ -19,23 +19,23 @@ const [templateData, setTemplateData] = useState({
 const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-        const userTemplateData = {
-            templateName: templateData.templateName,
-            name1: templateData.name1,
-            name2: templateData.name2,
-            name3: templateData.name3,
-            name4: templateData.name4
-        }
-        
-        const template = await sendForm(userTemplateData)
-        console.log(template);
+
+        const userListData = {
+        listName: listData.listName,
+        item1: listData.item1,
+        item2: listData.item2,
+        item3: listData.item3,
+        item4: listData.item4,
+        item5: listData.item5}
+        const list = await sendForm(userListData)
+        console.log(list);
     } catch (error) {
         console.error(error)
     }
 }
 
 const handleChange = (e) => {
-    setTemplateData({...templateData, [e.target.name] : e.target.value, error: ''}) 
+    setListData({...listData, [e.target.name] : e.target.value, error: ''}) 
 }
 
 //put in value, onchange, handlesubmit
@@ -45,21 +45,24 @@ const handleChange = (e) => {
       <div className="form-container">
         <form autoComplete="off" onSubmit={handleSubmit}>
             <label>Name of Template: </label>
-            <input type="text" name="templateName" value = {templateData.templateName} onChange={handleChange}/>
+            <input type="text" name="listName" value = {listData.listName} onChange={handleChange}/>
             
-            <label>List 1 Name: </label>
-            <input type="text" name="name1"  value = {templateData.name1} onChange={handleChange}/>
+            <label>Item 1: </label>
+            <input type="text" name="item1"  value = {listData.item1} onChange={handleChange}/>
             
-            <label>List 2 Name:</label>
-            <input type="text" name="name2" value = {templateData.name2} onChange={handleChange}/>
+            <label>Item 2:</label>
+            <input type="text" name="item2" value = {listData.item2} onChange={handleChange}/>
             
-            <label>List 3 Name:</label>
-            <input type="text" name="name3" value = {templateData.name3} onChange={handleChange}/>
+            <label>Item 3:</label>
+            <input type="text" name="item3" value = {listData.item3} onChange={handleChange}/>
 
-            <label>List 4 Name:</label>
-            <input type="text" name="name4" value = {templateData.name4} onChange={handleChange}/>
+            <label>Item 4:</label>
+            <input type="text" name="item4" value = {listData.item4} onChange={handleChange}/>
 
-            <button type="submit">Create Template</button>
+            <label>Item 5:</label>
+            <input type="text" name="item5" value = {listData.item5} onChange={handleChange}/>
+
+            <button type="submit">Create List</button>
         </form>
       </div>
     </div>

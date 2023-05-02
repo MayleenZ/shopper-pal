@@ -1,10 +1,10 @@
-const BASE_URL = '/api/templates';
+const BASE_URL = '/api/lists';
 //send request 
 
 
 //* Send Form Data (templateName, listArray )to Backend 
-export function sendForm(userTemplateData){
-    return sendRequest(`${BASE_URL}/create`, 'POST', userTemplateData)
+export function sendForm(userListData){
+    return sendRequest(`${BASE_URL}/create`, 'POST', userListData)
 }
 
 
