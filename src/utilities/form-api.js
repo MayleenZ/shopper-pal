@@ -8,9 +8,13 @@ export function sendForm(userListData){
 }
 
 
+export function getLists(){
+  return sendRequest(`${BASE_URL}/saved`, 'GET')
+}
 
-
-
+export function deleteList(id){
+  return sendRequest(`${BASE_URL}/saved/${id}`, "DELETE")
+}
 
 
 /*--- Helper Functions ---*/

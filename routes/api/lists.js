@@ -6,4 +6,6 @@ router.get('/saved', listCtrl.allLists)
 
 router.post('/create', listCtrl.createList)
 
+router.delete('/saved/:id', listCtrl.deleteList)
+
 module.exports = router;
