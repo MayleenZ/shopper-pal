@@ -15,7 +15,13 @@ export function deleteList(id){
   return sendRequest(`${BASE_URL}/saved/${id}`, "DELETE")
 }
 
+export function editList(id){
+  return sendRequest(`${BASE_URL}/edit/${id}`, "PUT")
+}
 
+export function getList(id){
+  return sendRequest(`${BASE_URL}/${id}`)
+}
 
 
 

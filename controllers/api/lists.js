@@ -11,12 +11,27 @@ async function createList(req, res) {
   }
 }
 
-//EDIT LIST
-// router.put('/saved/:id/edit', listCtrl.editList)
-async function editList(req,res){
+//get list
+async function getList(req,res){
   try {
     const list = await List.findById(req.params.id)
     console.log(list);
+    res.json(list)
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+
+
+//EDIT LIST
+// router.put('/saved/:id/edit', listCtrl.editList)
+    // <form method = "POST" action={`/logs/${log._id}/?_method=PUT`}>
+async function editList(req,res){
+  try {
+    const list = await List.findByIdAndUpdate(req.params.id)
+    console.log(list);
+    res.json(list)
   } catch (error) {
     console.error(error)
   }
@@ -25,8 +40,9 @@ async function editList(req,res){
 //delete list 
 async function deleteList(req,res){
     try {
-        const list = await List.findByIdAndDelete(req.params.id);
+        const list = await List.findByIdAndRemove(req.params.id);
         console.log(list + "is deleted");
+        res.json(list)
     } catch (error) {
         console.error(error)
     }
@@ -43,5 +59,5 @@ async function allLists(req,res){
 }
 
 module.exports = {
-  createList, deleteList, allLists, editList
+  createList, deleteList, allLists, editList, getList
 };

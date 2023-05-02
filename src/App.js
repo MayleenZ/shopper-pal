@@ -7,6 +7,7 @@ import NavBar from './components/NavBar';
 import ListFormPage from './pages/ListFormPage'
 import Homepage from './pages/Homepage'
 import SavedPage from './pages/SavedPage';
+import EditPage from './pages/EditPage';
 
 import { getUser } from './utilities/users-service';
 
@@ -25,6 +26,7 @@ function App() {
         <Route path='/home' element={ <Homepage /> }/>
         <Route path='/create' element={ <ListFormPage /> }/>
         <Route path = '/saved'element= {<SavedPage/>}/>
+        <Route path = '/edit/:id'element= {<EditPage/>}/>
       </Routes>
       </>
      : 
