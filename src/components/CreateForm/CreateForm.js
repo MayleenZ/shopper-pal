@@ -6,30 +6,19 @@ import {sendForm} from '../../utilities/form-api'
 
 
 export default function CreateForm() {
-//     const [templateName, setTemplateName] = useState("")
-
-//     const [list, setList] = useState({
-//     name1: "",
-//     name2: "",
-//     name3: "",
-//     name4: ""
-// })
 
 const [templateData, setTemplateData] = useState({
-    templateName: "",
-    name1: "",
-    name2: "",
-    name3: "",
-    name4: ""
+    listName: "",
+    item1: "",
+    item2: "",
+    item3: "",
+    item4: "",
+    item5: ""
 })
 
 const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-        // const templateData = {
-        //     templateName,
-        //     listArray : [...list]
-        // }
         const userTemplateData = {
             templateName: templateData.templateName,
             name1: templateData.name1,

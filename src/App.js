@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import AuthPage from './pages/AuthPage';
 import NavBar from './components/NavBar';
 
-import TemplatePage from './pages/TemplatePage'
+import TemplateFormPage from './pages/TemplateFormPage'
 import Homepage from './pages/Homepage'
 import SavedPage from './pages/SavedPage';
 
@@ -23,7 +23,7 @@ function App() {
       <NavBar user={user} setUser={setUser}/>
       <Routes>
         <Route path='/home' element={ <Homepage /> }/>
-        <Route path='/create' element={ <TemplatePage /> }/>
+        <Route path='/create' element={ <TemplateFormPage /> }/>
         <Route path = '/saved'element= {<SavedPage/>}/>
       </Routes>
       </>

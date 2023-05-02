@@ -5,7 +5,7 @@ const templateCtrl = require('../../controllers/api/templates')
 //GET items
 router.get('/saved', templateCtrl.allTemplates)
 
-router.post('create', templateCtrl.createTemplate)
+router.post('/create', templateCtrl.createTemplate)
 
 
 
