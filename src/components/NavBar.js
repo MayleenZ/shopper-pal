@@ -10,9 +10,9 @@ function NavBar({ user, setUser }) {
     <nav>
       <Link to="/home">Home</Link>
       &nbsp; | &nbsp;
-      <Link to="/create">Create Your Template</Link>
+      <Link to="/create">Create Your Lists</Link>
       &nbsp; | &nbsp;
-      <Link to="/saved">Saved Templates</Link> 
+      <Link to="/saved">Saved Lists</Link> 
       &nbsp; | &nbsp;
       <Link to="" onClick={handleLogOut}>
         Logout

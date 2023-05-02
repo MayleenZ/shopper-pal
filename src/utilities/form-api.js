@@ -7,7 +7,6 @@ export function sendForm(userListData){
     return sendRequest(`${BASE_URL}/create`, 'POST', userListData)
 }
 
-
 export function getLists(){
   return sendRequest(`${BASE_URL}/saved`, 'GET')
 }
@@ -15,6 +14,12 @@ export function getLists(){
 export function deleteList(id){
   return sendRequest(`${BASE_URL}/saved/${id}`, "DELETE")
 }
+
+
+
+
+
+
 
 
 /*--- Helper Functions ---*/

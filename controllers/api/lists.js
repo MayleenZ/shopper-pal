@@ -12,19 +12,27 @@ async function createList(req, res) {
 }
 
 //EDIT LIST
+// router.put('/saved/:id/edit', listCtrl.editList)
+async function editList(req,res){
+  try {
+    const list = await List.findById(req.params.id)
+    console.log(list);
+  } catch (error) {
+    console.error(error)
+  }
+}
 
-
-
-//delete list from a template
+//delete list 
 async function deleteList(req,res){
     try {
-        const list = await List.findByIdAndDelete(req.params.listId);
+        const list = await List.findByIdAndDelete(req.params.id);
         console.log(list + "is deleted");
     } catch (error) {
         console.error(error)
     }
 }
 
+//get all lists
 async function allLists(req,res){
   try {
       const lists = await List.find({})
@@ -35,5 +43,5 @@ async function allLists(req,res){
 }
 
 module.exports = {
-  createList, deleteList, allLists
+  createList, deleteList, allLists, editList
 };

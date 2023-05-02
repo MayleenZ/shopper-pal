@@ -44,7 +44,7 @@ const handleChange = (e) => {
     <div>
       <div className="form-container">
         <form autoComplete="off" onSubmit={handleSubmit}>
-            <label>Name of Template: </label>
+            <label>Name of List: </label>
             <input type="text" name="listName" value = {listData.listName} onChange={handleChange}/>
             
             <label>Item 1: </label>
