@@ -1,9 +1,10 @@
 import Edit from "../components/EditForm/EditForm"
 
-function EditPage(){
+
+function EditPage({user}){
     return (
         <div>
-            <Edit />
+            <Edit user={user}/>
         </div>
     )
 }

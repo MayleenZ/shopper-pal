@@ -3,10 +3,11 @@ import * as formAPI from "../../utilities/form-api";
 import { useParams } from "react-router-dom";
 import {useNavigate} from 'react-router-dom'
 
-function Edit() {
+function Edit({user}) {
   const navigate = useNavigate()
   //setForm data here
   const [editedData, setEditedData] = useState({
+    user: user,
     listName: "",
     item1: "",
     item2: "",

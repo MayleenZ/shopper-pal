@@ -5,8 +5,9 @@ import { useState } from 'react'
 import * as formAPI from "../../utilities/form-api";
 import { useNavigate } from 'react-router-dom'
 
-export default function CreateForm() {
+export default function CreateForm({user}) {
 const navigate = useNavigate()
+console.log(user._id);
 const [listData, setListData] = useState({
     listName: "",
     item1: "",
@@ -20,6 +21,7 @@ const handleSubmit = async (e) => {
     e.preventDefault()
     try {
         const userListData = {
+        user: user._id,
         listName: listData.listName,
         item1: listData.item1,
         item2: listData.item2,

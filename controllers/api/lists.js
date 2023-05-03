@@ -4,6 +4,8 @@ const List = require("../../models/list");
 //create list for a template
 async function createList(req, res) {
   try {
+    console.log('creating list');
+    console.log(req.body);
     const list = await List.create(req.body);
     console.log(list);
     res.json(list)
@@ -52,6 +54,7 @@ async function deleteList(req,res){
 //get all lists
 async function allLists(req,res){
   try {
+    console.log('getting all lists', req.body);
       const lists = await List.find({})
       res.json(lists)
   } catch (error) {

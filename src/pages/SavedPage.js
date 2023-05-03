@@ -2,15 +2,18 @@ import { useState, useEffect } from "react";
 import * as formAPI from "../utilities/form-api";
 import { useNavigate } from "react-router-dom";
 
-function SavedPage() {
+function SavedPage({user}) {
   const [lists, setLists] = useState([]);
+  console.log(user);
   const navigate = useNavigate();
   //to get all lists
   useEffect(function () {
     async function getLists() {
       const lists = await formAPI.getLists();
       setLists(lists);
+      console.log(lists);
     }
+    console.log(user);
     getLists();
   }, []);
 

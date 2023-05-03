@@ -1,10 +1,10 @@
 import CreateForm from "../components/CreateForm/CreateForm";
 
-function ListFormPage() {
+function ListFormPage({user}) {
   return (
     <div>
       <h1>Create Your List</h1>
-      <CreateForm />
+      <CreateForm user={user}/>
       
     </div>
   );

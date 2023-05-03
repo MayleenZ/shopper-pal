@@ -7,7 +7,7 @@ export function sendForm(userListData){
     return sendRequest(`${BASE_URL}/create`, 'POST', userListData)
 }
 
-export function getLists(){
+export function getLists(userId){
   return sendRequest(`${BASE_URL}/saved`, 'GET')
 }
 
