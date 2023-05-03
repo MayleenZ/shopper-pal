@@ -6,6 +6,7 @@ async function createList(req, res) {
   try {
     const list = await List.create(req.body);
     console.log(list);
+
   } catch (error) {
     console.error(error);
   }
@@ -31,11 +32,7 @@ async function editList(req,res){
   console.log("sending", req.body);
   try {
     const list = await List.findByIdAndUpdate(req.params.id, req.body, {new: true})
-    //the mongoose method is not working as expected, it is updating but not returning the updated list right away even with await
-    //Now, instead of going through this method, we are getting the freshly made data from getList from mongo 
-
-    // the mongo collection is being updated, but not returning the updated list
-    // is findByIdAndUpdate deprecated? im seeing updateOne being used online
+    //now mongoose method is working with the {new: true}
     console.log("returning", list);
     res.json(list)
   } catch (error) {

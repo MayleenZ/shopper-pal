@@ -2,11 +2,11 @@
 
 
 import { useState } from 'react'
-import {sendForm} from '../../utilities/form-api'
-
+import * as formAPI from "../../utilities/form-api";
+import { useNavigate } from 'react-router-dom'
 
 export default function CreateForm() {
-
+const navigate = useNavigate()
 const [listData, setListData] = useState({
     listName: "",
     item1: "",
@@ -19,7 +19,6 @@ const [listData, setListData] = useState({
 const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-
         const userListData = {
         listName: listData.listName,
         item1: listData.item1,
@@ -27,8 +26,10 @@ const handleSubmit = async (e) => {
         item3: listData.item3,
         item4: listData.item4,
         item5: listData.item5}
-        const list = await sendForm(userListData)
+        console.log(userListData);
+        const list = await formAPI.sendForm(userListData)
         console.log(list);
+        navigate('/saved')
     } catch (error) {
         console.error(error)
     }
@@ -43,7 +44,7 @@ const handleChange = (e) => {
   return (
     <div>
       <div className="form-container">
-        <form autoComplete="off" onSubmit={handleSubmit}>
+        <form autoComplete="off" onSubmit={(e) => handleSubmit(e)}>
             <label>Name of List: </label>
             <input type="text" name="listName" value = {listData.listName} onChange={handleChange}/>
             

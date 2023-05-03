@@ -28,19 +28,6 @@ function SavedPage() {
     }
   };
 
-  // //to edit 
-  // const handleEdit = async (e, list) =>{
-  //   e.preventDefault();
-  //   try {
-  //     console.log("hello");
-  //     const editList = await formAPI.editList(list._id);
-  //     console.log(editList);
-  //     // const lists = await formAPI.getLists();
-  //     // setLists(lists);
-  //   } catch (error) {
-  //     console.error(error)
-  //   }
-  // }
 
 
   return (
@@ -66,7 +53,7 @@ function SavedPage() {
             <button type = "submit" value = "PUT" onClick = {() => navigate(`/edit/${list._id}`)}>
               Edit
             </button>
-            {/* <button type = "submit" value = "PUT" onClick = {(e) => handleEdit(e, list)}>Edit List</button> */}
+
           </div>
         );
       })}

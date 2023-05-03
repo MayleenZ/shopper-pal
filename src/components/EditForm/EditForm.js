@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import * as formAPI from "../../utilities/form-api";
 import { useParams } from "react-router-dom";
+import {useNavigate} from 'react-router-dom'
 
 function Edit() {
+  const navigate = useNavigate()
   //setForm data here
   const [editedData, setEditedData] = useState({
     listName: "",
@@ -33,16 +35,10 @@ function Edit() {
     e.preventDefault();
     try {
       console.log(list);
-      
       const editedData = await formAPI.editList(id, list);
-      // does not return updated list, it is returning the orginal list
       console.log(editedData);
-
-      // getting fresh and updated list
-      const listData = await formAPI.getListById(id);
-      console.log(listData);
-
-      setEditedData(listData);
+      setEditedData(editedData);
+      navigate('/saved')
     } catch (error) {
       console.error(error);
     }
@@ -112,7 +108,8 @@ function Edit() {
             }
           />
 
-          <button type="submit">Submit Edit</button>
+          <button type="submit" >Submit Edit</button>
+
         </form>
       </div>
     </div>
