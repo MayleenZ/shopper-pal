@@ -1,4 +1,4 @@
-import CreateForm from "../components/CreateForm/CreateForm.js";
+import CreateForm from ".../components/CreateForm/CreateForm.js";
 //do i map it here?
 // import * from ''
 //template api (.alltemplates)
