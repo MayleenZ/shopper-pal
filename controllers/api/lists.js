@@ -28,9 +28,13 @@ async function getList(req,res){
 // router.put('/saved/:id/edit', listCtrl.editList)
     // <form method = "POST" action={`/logs/${log._id}/?_method=PUT`}>
 async function editList(req,res){
+  console.log("sending", req.body);
   try {
-    const list = await List.findByIdAndUpdate(req.params.id)
-    console.log(list);
+    const list = await List.findByIdAndUpdate(req.params.id, req.body)
+
+    // the mongo collection is being updated, but not returning the updated list
+    // is findByIdAndUpdate deprecated? im seeing updateOne being used online
+    console.log("returning", list);
     res.json(list)
   } catch (error) {
     console.error(error)

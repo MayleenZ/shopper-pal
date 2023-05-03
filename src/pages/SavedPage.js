@@ -28,19 +28,19 @@ function SavedPage() {
     }
   };
 
-  //to edit 
-  const handleEdit = async (e, list) =>{
-    e.preventDefault();
-    try {
-      console.log("hello");
-      const editList = await formAPI.editList(list._id);
-      console.log(editList);
-      // const lists = await formAPI.getLists();
-      // setLists(lists);
-    } catch (error) {
-      console.error(error)
-    }
-  }
+  // //to edit 
+  // const handleEdit = async (e, list) =>{
+  //   e.preventDefault();
+  //   try {
+  //     console.log("hello");
+  //     const editList = await formAPI.editList(list._id);
+  //     console.log(editList);
+  //     // const lists = await formAPI.getLists();
+  //     // setLists(lists);
+  //   } catch (error) {
+  //     console.error(error)
+  //   }
+  // }
 
 
   return (

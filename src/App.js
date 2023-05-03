@@ -5,7 +5,7 @@ import AuthPage from './pages/AuthPage';
 import NavBar from './components/NavBar';
 
 import ListFormPage from './pages/ListFormPage'
-// import Homepage from 'src/pages/Homepage.js'
+import Homepage from './pages/Homepage.js'
 import SavedPage from './pages/SavedPage';
 import EditPage from './pages/EditPage';
 
@@ -23,7 +23,7 @@ function App() {
       <>
       <NavBar user={user} setUser={setUser}/>
       <Routes>
-        {/* <Route path='/home' element={ <Homepage /> }/> */}
+        <Route path='/home' element={ <Homepage /> }/>
         <Route path='/create' element={ <ListFormPage /> }/>
         <Route path = '/saved'element= {<SavedPage/>}/>
         <Route path = '/edit/:id'element= {<EditPage/>}/>
