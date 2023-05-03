@@ -9,7 +9,7 @@ Plan for what you should shop for and organize your shopping needs.
 Keep your shopping trips organized to save money, time and energy.
 
 ## Deployed Project
-### Heroku
+### [Heroku](https://may-shopper-pal-app.herokuapp.com/)
 
 ## Roadmap:
 ### [Trello Board](https://trello.com/b/4SC2aMDw/shopper-pal)
