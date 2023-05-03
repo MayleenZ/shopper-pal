@@ -3,8 +3,6 @@ import * as formAPI from "../../utilities/form-api";
 import { useParams } from "react-router-dom";
 
 function Edit() {
-  const [lists, setLists] = useState([]);
-
   //setForm data here
   const [editedData, setEditedData] = useState({
     listName: "",
@@ -35,11 +33,16 @@ function Edit() {
     e.preventDefault();
     try {
       console.log(list);
-      const editedList = await formAPI.editList(id, list);
-        console.log(editedList);
-      //   setEditedData(editedList)
-      // const updatedLists = await formAPI.getLists();
-      // setLists(updatedLists);
+      
+      const editedData = await formAPI.editList(id, list);
+      // does not return updated list, it is returning the orginal list
+      console.log(editedData);
+
+      // getting fresh and updated list
+      const listData = await formAPI.getListById(id);
+      console.log(listData);
+
+      setEditedData(listData);
     } catch (error) {
       console.error(error);
     }
