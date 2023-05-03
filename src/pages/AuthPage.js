@@ -9,7 +9,7 @@ function AuthPage({ setUser }) {
   return (
     <main className="AuthPage">
       <h1>Shopper Pal</h1>
-
+      
       <button onClick={() => setShowLogin(!showLogin)}>
         {showLogin ? "Sign up" : "Sign in"}
       </button>

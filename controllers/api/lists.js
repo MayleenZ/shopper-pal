@@ -6,7 +6,7 @@ async function createList(req, res) {
   try {
     const list = await List.create(req.body);
     console.log(list);
-
+    res.json(list)
   } catch (error) {
     console.error(error);
   }
@@ -26,8 +26,6 @@ async function getList(req,res){
 
 
 //EDIT LIST
-// router.put('/saved/:id/edit', listCtrl.editList)
-    // <form method = "POST" action={`/logs/${log._id}/?_method=PUT`}>
 async function editList(req,res){
   console.log("sending", req.body);
   try {

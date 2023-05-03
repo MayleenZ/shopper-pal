@@ -121,15 +121,54 @@ button, a.button {
   margin: 1vmin;
   padding: 1vmin;
   color: var(--white);
-  background-color: var(--orange);
+  background-color: rgba(69, 129, 167, 0.828);
   font-size: 2vmin;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
-  border: .1vmin solid var(--tan-2);
+  border: .1vmin solid white;
   border-radius: .5vmin;
   outline: none;
   cursor: pointer;
+}
+
+#list{
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+}
+
+#link-new{
+  text-decoration: none;
+  color: white;
+}
+
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+a  {
+  text-decoration: none;
+  color: rgb(17, 45, 149);
+}
+
+#nav-bar{
+  font-size: 1vw;
+  color: rgb(7, 72, 164);
+  background-color: #6ab1bd49;
+  border-radius: 45px;
+  padding: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+
+
+li {
+  margin-left: 45vw; /* Adjust accordingly */
+  margin-right: 45vw;
+  line-height: 1.5vw;
 }
 
 button.btn-sm {

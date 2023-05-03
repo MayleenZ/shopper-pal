@@ -7,17 +7,17 @@ function NavBar({ user, setUser }) {
     setUser(null);
   };
   return (
-    <nav>
-      <Link to="/home">Home</Link>
+    <nav id="nav-bar">
+      <Link to="/">Home</Link>
       &nbsp; | &nbsp;
-      <Link to="/create">Create Your Lists</Link>
+      <Link to="/create">Create List</Link>
       &nbsp; | &nbsp;
       <Link to="/saved">Saved Lists</Link> 
       &nbsp; | &nbsp;
       <Link to="" onClick={handleLogOut}>
         Logout
       </Link>
-      &nbsp; | &nbsp;
+
       <h1>Welcome, {user.name}</h1>
     </nav>
   );

@@ -23,7 +23,7 @@ function App() {
       <>
       <NavBar user={user} setUser={setUser}/>
       <Routes>
-        <Route path='/home' element={ <Homepage /> }/>
+        <Route path='/' element={ <Homepage /> }/>
         <Route path='/create' element={ <ListFormPage /> }/>
         <Route path = '/saved'element= {<SavedPage/>}/>
         <Route path = '/edit/:id'element= {<EditPage/>}/>
