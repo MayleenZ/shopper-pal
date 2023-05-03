@@ -5,7 +5,7 @@ import AuthPage from './pages/AuthPage';
 import NavBar from './components/NavBar';
 
 import ListFormPage from './pages/ListFormPage'
-import Homepage from './pages/Homepage'
+import Homepage from 'src/pages/Homepage.js'
 import SavedPage from './pages/SavedPage';
 import EditPage from './pages/EditPage';
 
