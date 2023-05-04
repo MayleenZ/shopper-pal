@@ -1,4 +1,4 @@
-function Homepage() {
+function HomePage() {
   return (
     <div>
       <style>
@@ -9,10 +9,10 @@ function Homepage() {
         alt="shopper-logo"
         src="https://i.postimg.cc/mgy6T4bB/Screen-Shot-2023-05-04-at-6-38-45-AM.png"
       />
-      <p>Welcome to Shopper Pal!</p>
+      <p>Greetings from Shopper Pal!</p>
       <p>You can create, update and delete your favorite lists.</p>
     </div>
   );
 }
 
-export default Homepage;
+export default HomePage;
