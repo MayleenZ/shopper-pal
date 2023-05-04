@@ -11,6 +11,7 @@ function HomePage() {
       />
       <p>Greetings from Shopper Pal!</p>
       <p>You can create, update and delete your favorite lists.</p>
+      <p>Create Grocery Lists, Dinner Party Checklist, School Supply List..</p>
     </div>
   );
 }

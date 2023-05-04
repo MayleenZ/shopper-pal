@@ -3,7 +3,9 @@
 ## About The Project
 Meet Shopper Pal, your new list best friend!
 
-Plan for what you should shop for and organize your shopping needs.
+Plan and organize your shopping needs.
+
+* A full stack application utilizing CRUD functionalities. 
 
 ## Usage
 Keep your shopping trips organized to save money, time and energy.
@@ -37,16 +39,19 @@ Keep your shopping trips organized to save money, time and energy.
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
 ### Technologies Explained:
-Built with a fully operational MERN stack. Utilizing MongoDB, mongoose methods, React and Node.js to create a list full CRUD application. 
+* Built with a fully operational MERN stack. Utilizing MongoDB, mongoose methods, React and Node.js to create a full CRUD application. 
+* CRUD is the ability to Create, Read, Update and Delete on an application.
+* I appreciated learning more about the mongoose methods and the different ways they are implemented to model data. 
+* I also enjoyed learning more about backend APIs and especially creating one. 
 
 
 ## Future Enhancements
-Adding more CRUD functionalities with the items feature. 
-Creating an organized user framework.
+* Adding more CRUD functionalities with the items feature. 
+* Creating an organized user framework.
 
 
 ## Unsolved Problems
-N/A 
+* Passing user down. 
 
 ## Contact
 ![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)    
