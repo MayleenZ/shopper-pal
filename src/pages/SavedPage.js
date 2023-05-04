@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import * as formAPI from "../utilities/form-api";
 import { useNavigate } from "react-router-dom";
 
-function SavedPage({user}) {
+function SavedPage({ user }) {
   const [lists, setLists] = useState([]);
   console.log(user);
   const navigate = useNavigate();
@@ -32,16 +32,20 @@ function SavedPage({user}) {
 
   return (
     <div>
+      <style>
+        @import
+        url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+      </style>
       <h1>Saved Lists</h1>
       <button>
-        <a href="/create" id="link-new">Add New List</a>
+        <a href="/create" id="link-new">
+          Add New List
+        </a>
       </button>
       {lists.map((list) => {
         return (
           <div key={list._id} id="list">
-            <h1>
-              {list.listName}
-            </h1>
+            <h1>{list.listName}</h1>
             <ol>
               <li>{list.item1}</li>
               <li>{list.item2}</li>
@@ -64,7 +68,7 @@ function SavedPage({user}) {
             >
               Edit
             </button>
-            <hr/>
+            <hr />
           </div>
         );
       })}

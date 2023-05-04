@@ -7,6 +7,7 @@ function NavBar({ user, setUser }) {
     setUser(null);
   };
   return (
+    <div>
     <nav id="nav-bar">
       <Link to="/">Home</Link>
       &nbsp; | &nbsp;
@@ -17,9 +18,9 @@ function NavBar({ user, setUser }) {
       <Link to="" onClick={handleLogOut}>
         Logout
       </Link>
-
-      <h1>Welcome, {user.name}</h1>
     </nav>
+      <p>Welcome, {user.name}</p>
+      </div>
   );
 }
 

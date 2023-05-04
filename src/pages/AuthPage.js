@@ -8,8 +8,12 @@ function AuthPage({ setUser }) {
 
   return (
     <main className="AuthPage">
+      <style>
+        @import
+        url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+      </style>
       <h1>Shopper Pal</h1>
-      
+
       <button onClick={() => setShowLogin(!showLogin)}>
         {showLogin ? "Sign up" : "Sign in"}
       </button>
